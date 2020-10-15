@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+
+
+            font-family: sans-serif;
+        }
+
+
+
+
+        input {
+            width: 20.5%;
+            padding: 8px 5px;
+            margin: 8px 15px;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%"><b>Bankruptcy Status After 1 Year</b></h1>
+        <h3 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%">Enter Certain parameters given below to predict bankruptcy of particular company or organization</h3>
+        <p><strong>Attr1:</strong>net profit / total assets</p>
+        <p><strong>Attr4:</strong>current assets / short-term liabilities</p>
+        <p><strong>Attr21:</strong>sales (n) / sales (n-1)</p>
+        <p><strong>Attr27:</strong>profit on operating activities / financial expenses</p>
+        <p><strong>Attr34:</strong>operating expenses / total liabilities</p>
+        <p><strong>Attr35:</strong>profit on sales / total assets</p>
+        <p><strong>Attr52:</strong>(short-term liabilities * 365) / cost of products sold)</p>
+        <p><strong>Attr53:</strong>equity / fixed assets</p>
+        <p><strong>Attr58:</strong>total costs /total sales</p>
+
+        <!-- Main Input For Receiving Query to our ML {{ url_for('predict1')}}-->
+        <form action="{{ url_for('predict5')}}" method="post">
+        <!--<form method="post" action="/1Year" > -->
+            <input type="text" name="Attr1" placeholder="Attr1_value" required="required" />
+            <input type="text" name="Attr4" placeholder="Attr4_value" required="required" />
+            <input type="text" name="Attr21" placeholder="Attr21_value" required="required" />
+            <input type="text" name="Attr27" placeholder="Attr27_value" required="required" />
+            <input type="text" name="Attr34" placeholder="Attr34_value" required="required" />
+            <input type="text" name="Attr35" placeholder="Attr35_value" required="required" />
+            <input type="text" name="Attr52" placeholder="Attr52_value" required="required" />
+            <input type="text" name="Attr53" placeholder="Attr53_value" required="required" />
+            <input type="text" name="Attr58" placeholder="Attr58_value" required="required" />
+           
+
+            <div style=" position:relative;top:50%; left:40%;">
+                <button type="submit" class="btn btn-success" style="margin-top: 0.5%;">Predict Bankruptcy</button>
+            </div>
+
+        </form>
+        <br>
+
+                <h1 style="text-align:center; color: black;"><b>{{ prediction_text }}</b></h1>
+
+
+    </div>
+ <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer {
+   position:;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 35px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+   color: black;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="footer">
+    <p><i><b>A Machine Learning Web App Build With Flask by -- Anand Ranjan </b></i></p>
+</div>
+
+</body>
+
+</body>
+
+</html>

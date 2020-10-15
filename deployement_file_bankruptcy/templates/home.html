@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+
+
+            font-family: sans-serif;
+        }
+
+
+
+
+        input {
+            width: 20.5%;
+            padding: 8px 5px;
+            margin: 8px 15px;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+        <h1 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%"><b>Bankruptcy Prediction </b></h1>
+        <h2 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%"><b>After how many years want to predict ? choose below </b></h2>
+        <!-- Main Input For Receiving Query to our ML -->
+
+         <div style=" position:relative;top:70%; left:45%;">
+                <form action ="{{ url_for('predict1')}}" method="get">
+                <button type="submit" class="btn btn-success" style="margin-top: 1.5%;">5Year</button>
+                </form>
+                <form action ="{{ url_for('predict2')}}" method="get">
+                <button type="submit" class="btn btn-success" style="margin-top: 1.5%;">4Year</button>
+                </form>
+                <form action ="{{ url_for('predict3')}}" method="get">
+                <button type="submit" class="btn btn-success" style="margin-top: 1.5%;">3Year</button>
+                </form>
+                <form action ="{{ url_for('predict4')}}" method="get">
+                <button type="submit" class="btn btn-success" style="margin-top: 1.5%;">2Year</button>
+                </form>
+                <form action ="{{ url_for('predict5')}}" method="get">
+                <button type="submit" class="btn btn-success" style="margin-top: 1.5%;">1Year</button>
+                </form>
+         </div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 35px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+   color: black;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="footer">
+    <p><i><b>A Machine Learning Web App to predict bankruptcy Build With Flask by -- Saket Nandan </b></i></p>
+</div>
+
+</body>
+</body>
+
+</html>

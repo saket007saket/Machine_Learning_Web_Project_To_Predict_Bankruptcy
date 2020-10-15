@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+
+
+            font-family: sans-serif;
+        }
+
+
+
+
+        input {
+            width: 20.5%;
+            padding: 8px 5px;
+            margin: 8px 15px;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%"><b>Bankruptcy Status After 4 Year</b></h1>
+        <h3 style="text-align: center; color: rgb(85, 85, 85);margin-top: 1.5%;margin-bottom: 1.5%">Enter Certain parameters given below to predict bankruptcy of particular company or organization </h3>
+
+        <p><strong>Attr5:</strong>[(cash + short-term securities + receivables - short-term liabilities) / (operating expenses - depreciation)] * 365</p>
+        <p><strong>Attr6:</strong>retained earnings / total assets</p>
+        <p><strong>Attr8:</strong>book value of equity / total liabilities</p>
+        <p><strong>Attr12:</strong>gross profit / short-term liabilities</p>
+        <p><strong>Attr21:</strong>sales (n) / sales (n-1)</p>
+        <p><strong>Attr22:</strong>profit on operating activities / total assets</p>
+        <p><strong>Attr24:</strong>gross profit (in 3 years) / total assets</p>
+        <p><strong>Attr27:</strong>profit on operating activities / financial expenses</p>
+        <p><strong>Attr28:</strong>working capital / fixed assets</p>
+        <p><strong>Attr34:</strong>operating expenses / total liabilities</p>
+        <p><strong>Attr35:</strong>profit on sales / total assets</p>
+        <p><strong>Attr40:</strong>(current assets - inventory - receivables) / short-term liabilities</p>
+        <p><strong>Attr42:</strong>profit on operating activities / sales</p>
+        <p><strong>Attr46:</strong>(current assets - inventory) / short-term liabilities</p>
+        <p><strong>Attr51:</strong>short-term liabilities / total assets</p>
+        <p><strong>Attr53:</strong>equity / fixed assets</p>
+        <p><strong>Attr54:</strong>constant capital / fixed assets</p>
+        <p><strong>Attr56:</strong>(sales - cost of products sold) / sales</p>
+        <p><strong>Attr58:</strong>total costs /total sales</p>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict2')}}" method="post">
+            <input type="text" name="Attr5" placeholder="Attr5_value" required="required" />
+            <input type="text" name="Attr6" placeholder="Attr6_value" required="required" />
+            <input type="text" name="Attr8" placeholder="Attr8_value" required="required" />
+            <input type="text" name="Attr12" placeholder="Attr12_value" required="required" />
+            <input type="text" name="Attr21" placeholder="Attr21_value" required="required" />
+            <input type="text" name="Attr22" placeholder="Attr22_value" required="required" />
+            <input type="text" name="Attr24" placeholder="Attr24_value" required="required" />
+            <input type="text" name="Attr27" placeholder="Attr27_value" required="required" />
+            <input type="text" name="Attr28" placeholder="Attr28_value" required="required" />
+            <input type="text" name="Attr34" placeholder="Attr34_value" required="required" />
+            <input type="text" name="Attr35" placeholder="Attr35_value" required="required" />
+            <input type="text" name="Attr40" placeholder="Attr40_value" required="required" />
+            <input type="text" name="Attr42" placeholder="Attr42_value" required="required" />
+            <input type="text" name="Attr46" placeholder="Attr46_value" required="required" />
+            <input type="text" name="Attr51" placeholder="Attr51_value" required="required" />
+            <input type="text" name="Attr53" placeholder="Attr53_value" required="required" />
+            <input type="text" name="Attr54" placeholder="Attr54_value" required="required" />
+            <input type="text" name="Attr56" placeholder="Attr56_value" required="required" />
+            <input type="text" name="Attr58" placeholder="Attr58_value" required="required" />
+
+
+
+            <div style=" position:relative;top:50%; left:40%;">
+                <button type="submit" class="btn btn-success" style="margin-top: 0.5%;">Predict Bankruptcy</button>
+            </div>
+
+        </form>
+        <br>
+
+                <h1 style="text-align:center; color: black;"><b>{{ prediction_text }}</b></h1>
+
+
+    </div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer {
+   position:;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 35px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+   color: black;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="footer">
+    <p><i><b>A Machine Learning Web App to predict bankruptcy Build With Flask by -- Saket Nandan</b></i></p>
+</div>
+
+</body>
+
+</body>
+
+</html>
